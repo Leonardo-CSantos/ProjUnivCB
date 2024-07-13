@@ -1,17 +1,32 @@
 # depslib dependency file v1.0
-1720902618 source:c:\users\lanhouse\documents\projunivcb\projuniv\main.cpp
+1720904752 source:c:\users\lanhouse\documents\projunivcb\projuniv\main.cpp
 	"Principal.h"
+	"stdafx.h"
 
-1720902097 c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.h
+1720906042 c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.h
+	"Universidade.h"
 
-1720902777 source:c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.cpp
+1720906170 source:c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.cpp
 	"Pessoa.h"
+	"stdafx.h"
+
+1720905791 source:c:\users\lanhouse\documents\projunivcb\projuniv\principal.cpp
+	"Principal.h"
+	"stdafx.h"
+	<time.h>
+	<Windows.h>
+
+1720905589 c:\users\lanhouse\documents\projunivcb\projuniv\principal.h
+	"Pessoa.h"
+	"Universidade.h"
+
+1720905765 c:\users\lanhouse\documents\projunivcb\projuniv\universidade.h
+
+1720905905 c:\users\lanhouse\documents\projunivcb\projuniv\stdafx.h
 	<string.h>
 	<iostream>
 
-1720902618 source:c:\users\lanhouse\documents\projunivcb\projuniv\principal.cpp
-	"Principal.h"
-
-1720902777 c:\users\lanhouse\documents\projunivcb\projuniv\principal.h
-	"Pessoa.h"
+1720905681 source:c:\users\lanhouse\documents\projunivcb\projuniv\universidade.cpp
+	"Universidade.h"
+	"stdafx.h"
 

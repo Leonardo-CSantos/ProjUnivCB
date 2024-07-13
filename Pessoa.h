@@ -1,3 +1,5 @@
+#pragma once
+#include "Universidade.h"
 
 class Pessoa
 {
@@ -7,6 +9,7 @@ class Pessoa
         int anoP;
         int idadeP;
         char nomeP[30];
+        Universidade *univFiliado;
 
     public:
         Pessoa (int diaNa, int mesNa, int anoNa, const char* nome = "");
@@ -17,6 +20,9 @@ class Pessoa
         void calculaIdade (int diaAt, int mesAt, int anoAt);
         int getIdade ();
         void printIdade ();
-
+        void setNome (const char* nome);
+        char* getNome ();
+        void setUniv (Universidade* uni);
+        void getUniv ();
 };
 

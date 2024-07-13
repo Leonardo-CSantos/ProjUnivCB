@@ -1,11 +1,10 @@
 #include "Pessoa.h"
-#include <string.h>
-#include <iostream>
-using namespace std;
+#include "stdafx.h"
 
 Pessoa::Pessoa (int diaNa, int mesNa, int anoNa, const char* nome)
 {
     inicializa (diaNa, mesNa, anoNa, nome);
+    univFiliado = NULL;
 }
 
 Pessoa::Pessoa ()
@@ -24,7 +23,7 @@ void Pessoa::inicializa (int diaNa, int mesNa, int anoNa, const char* nome)
     mesP = mesNa;
     anoP = anoNa;
     idadeP = -1;
-    strcpy(nomeP, nome);
+    setNome (nome);
 }
 
 void Pessoa::calculaIdade (int diaAt, int mesAt, int anoAt)
@@ -44,4 +43,25 @@ int Pessoa::getIdade ()
 void Pessoa::printIdade ()
 {
     cout << "A idade de " << nomeP << " seria " << idadeP << " anos." << endl;
+}
+
+void Pessoa::setNome (const char* nome)
+{
+    strcpy (nomeP, nome);
+}
+
+char* Pessoa::getNome ()
+{
+    return nomeP;
+}
+
+void Pessoa::setUniv (Universidade* uni)
+{
+    univFiliado = uni;
+}
+
+void Pessoa::getUniv ()
+{
+    cout << "A Pessoa " << nomeP << " faz parte da Universidade " << univFiliado->getNome() << endl;
+
 }
