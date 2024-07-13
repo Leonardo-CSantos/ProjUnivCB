@@ -1,11 +1,17 @@
 # depslib dependency file v1.0
-1720899958 source:c:\users\lanhouse\documents\projunivcb\projuniv\main.cpp
-	"Pessoa.h"
+1720902618 source:c:\users\lanhouse\documents\projunivcb\projuniv\main.cpp
+	"Principal.h"
 
-1720899958 c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.h
+1720902097 c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.h
 
-1720899958 source:c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.cpp
+1720902777 source:c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.cpp
 	"Pessoa.h"
 	<string.h>
 	<iostream>
+
+1720902618 source:c:\users\lanhouse\documents\projunivcb\projuniv\principal.cpp
+	"Principal.h"
+
+1720902777 c:\users\lanhouse\documents\projunivcb\projuniv\principal.h
+	"Pessoa.h"
 

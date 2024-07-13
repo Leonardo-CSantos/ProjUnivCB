@@ -10,6 +10,10 @@ class Pessoa
 
     public:
         Pessoa (int diaNa, int mesNa, int anoNa, const char* nome = "");
+        Pessoa ();
+        ~Pessoa ();
+
+        void inicializa (int diaNa, int mesNa, int anoNa, const char* nome = "");
         void calculaIdade (int diaAt, int mesAt, int anoAt);
         int getIdade ();
         void printIdade ();

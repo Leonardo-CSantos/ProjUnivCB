@@ -5,6 +5,21 @@ using namespace std;
 
 Pessoa::Pessoa (int diaNa, int mesNa, int anoNa, const char* nome)
 {
+    inicializa (diaNa, mesNa, anoNa, nome);
+}
+
+Pessoa::Pessoa ()
+{
+    inicializa (0, 0, 0);
+}
+
+Pessoa::~Pessoa ()
+{
+
+}
+
+void Pessoa::inicializa (int diaNa, int mesNa, int anoNa, const char* nome)
+{
     diaP = diaNa;
     mesP = mesNa;
     anoP = anoNa;
