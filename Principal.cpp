@@ -1,11 +1,17 @@
 #include "Principal.h"
+#include <time.h>
+#include <Windows.h>
 
 Principal::Principal ()
 {
     Einstein.inicializa(14, 3, 1879, "Einstein");
     Newton.inicializa(4, 1, 1643, "Newton");
 
-    diaAt = 13; mesAt = 7; anoAt = 2024;
+    SYSTEMTIME st;
+    GetSystemTime (&st);
+    diaAt = st.wDay;
+    mesAt = st.wMonth;
+    anoAt = st.wYear;
 
     Executar();
 
