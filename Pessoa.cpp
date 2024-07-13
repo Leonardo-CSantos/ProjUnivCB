@@ -5,6 +5,7 @@ Pessoa::Pessoa (int diaNa, int mesNa, int anoNa, const char* nome)
 {
     inicializa (diaNa, mesNa, anoNa, nome);
     univFiliado = NULL;
+    depFiliado = NULL;
 }
 
 Pessoa::Pessoa ()
@@ -42,7 +43,7 @@ int Pessoa::getIdade ()
 
 void Pessoa::printIdade ()
 {
-    cout << "A idade de " << nomeP << " seria " << idadeP << " anos." << endl;
+    cout << "A idade de " << nomeP << " teria " << idadeP << " anos." << endl;
 }
 
 void Pessoa::setNome (const char* nome)
@@ -63,5 +64,14 @@ void Pessoa::setUniv (Universidade* uni)
 void Pessoa::getUniv ()
 {
     cout << "A Pessoa " << nomeP << " faz parte da Universidade " << univFiliado->getNome() << endl;
+}
 
+void Pessoa::setDpto (Departamento* dep)
+{
+    depFiliado = dep;
+}
+
+void Pessoa::getDpto ()
+{
+    cout << "A Pessoa " << nomeP << " faz parte do Departamento " << depFiliado->getNome() << endl;
 }

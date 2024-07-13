@@ -1,5 +1,6 @@
 #pragma once
 #include "Universidade.h"
+#include "Departamento.h"
 
 class Pessoa
 {
@@ -10,6 +11,7 @@ class Pessoa
         int idadeP;
         char nomeP[30];
         Universidade *univFiliado;
+        Departamento *depFiliado;
 
     public:
         Pessoa (int diaNa, int mesNa, int anoNa, const char* nome = "");
@@ -24,5 +26,7 @@ class Pessoa
         char* getNome ();
         void setUniv (Universidade* uni);
         void getUniv ();
+        void setDpto (Departamento *dep);
+        void getDpto ();
 };
 

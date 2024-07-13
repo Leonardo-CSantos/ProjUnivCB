@@ -1,6 +1,7 @@
 #pragma once
 #include "Pessoa.h"
 #include "Universidade.h"
+#include "Departamento.h"
 
 class Principal
 {
@@ -9,9 +10,13 @@ class Principal
         Pessoa Newton;
         Pessoa Leonardo;
 
-        Universidade Cambridge;
         Universidade Princeton;
+        Universidade Cambridge;
         Universidade UTFPR;
+
+        Departamento Fisica;
+        Departamento Matematica;
+        Departamento DAINF;
 
         int diaAt;
         int mesAt;

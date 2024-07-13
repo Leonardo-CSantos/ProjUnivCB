@@ -5,7 +5,8 @@
 
 Principal::Principal () :
 Leonardo (21, 6, 1999),
-UTFPR ("UTFPR")
+UTFPR ("UTFPR"),
+DAINF ("DAINF")
 {
     Einstein.inicializa(14, 3, 1879, "Einstein");
     Newton.inicializa(4, 1, 1643, "Newton");
@@ -13,6 +14,9 @@ UTFPR ("UTFPR")
 
     Cambridge.setNome ("Cambridge");
     Princeton.setNome ("Princeton");
+
+    Fisica.setNome("Fisica");
+    Matematica.setNome ("Matematica");
 
     SYSTEMTIME st;
     GetSystemTime (&st);
@@ -35,14 +39,24 @@ void Principal::Executar ()
     Leonardo.calculaIdade(diaAt, mesAt, anoAt);
 
 
-    Einstein.setUniv (&Cambridge);
-    Newton.setUniv (&Princeton);
+    Einstein.setUniv (&Princeton);
+    Einstein.setDpto (&Fisica);
+
+    Newton.setUniv (&Cambridge);
+    Newton.setDpto (&Matematica);
+
     Leonardo.setUniv (&UTFPR);
+    Leonardo.setDpto (&DAINF);
 
     Einstein.printIdade();
     Einstein.getUniv();
+    Einstein.getDpto();
+
     Newton.printIdade();
     Newton.getUniv();
+    Newton.getDpto();
+
     Leonardo.printIdade();
     Leonardo.getUniv();
+    Leonardo.getDpto();
 }
