@@ -31,6 +31,16 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Departamento.cpp" />
+		<Unit filename="Departamento.h" />
+		<Unit filename="Main.cpp" />
+		<Unit filename="Pessoa.cpp" />
+		<Unit filename="Pessoa.h" />
+		<Unit filename="Principal.cpp" />
+		<Unit filename="Principal.h" />
+		<Unit filename="Universidade.cpp" />
+		<Unit filename="Universidade.h" />
+		<Unit filename="stdafx.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

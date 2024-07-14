@@ -14,9 +14,11 @@ class Principal
         Universidade Cambridge;
         Universidade UTFPR;
 
-        Departamento Fisica;
-        Departamento Matematica;
+        Departamento FisicaPrinceton;
+        Departamento MatematicaCambridge;
         Departamento DAINF;
+        Departamento ModaUTFPR;
+        Departamento DAELN;
 
         int diaAt;
         int mesAt;

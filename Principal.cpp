@@ -15,8 +15,16 @@ DAINF ("DAINF")
     Cambridge.setNome ("Cambridge");
     Princeton.setNome ("Princeton");
 
-    Fisica.setNome("Fisica");
-    Matematica.setNome ("Matematica");
+    FisicaPrinceton.setNome("Fisica");
+    MatematicaCambridge.setNome ("Matematica");
+    ModaUTFPR.setNome("ModaUTFPR");
+    DAELN.setNome("DAELN");
+
+    UTFPR.setDptos(&DAELN);
+    UTFPR.setDptos(&ModaUTFPR);
+    UTFPR.setDptos(&DAINF);
+    Princeton.setDptos(&FisicaPrinceton);
+    Cambridge.setDptos(&MatematicaCambridge);
 
     SYSTEMTIME st;
     GetSystemTime (&st);
@@ -40,10 +48,10 @@ void Principal::Executar ()
 
 
     Einstein.setUniv (&Princeton);
-    Einstein.setDpto (&Fisica);
+    Einstein.setDpto (&FisicaPrinceton);
 
     Newton.setUniv (&Cambridge);
-    Newton.setDpto (&Matematica);
+    Newton.setDpto (&MatematicaCambridge);
 
     Leonardo.setUniv (&UTFPR);
     Leonardo.setDpto (&DAINF);
@@ -59,4 +67,10 @@ void Principal::Executar ()
     Leonardo.printIdade();
     Leonardo.getUniv();
     Leonardo.getDpto();
+
+    UTFPR.getDptos();
+    Princeton.getDptos();
+    Cambridge.getDptos();
+    DAINF.getUniv();
+
 }
