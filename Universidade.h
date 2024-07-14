@@ -1,12 +1,12 @@
 #pragma once
+#include "stdafx.h"
 #include "Departamento.h"
 
 class Universidade
 {
     private:
         char nomeU[30];
-        Departamento* pDptos[50];
-        int nDptos;
+        vector<Departamento*> lDptos;
 
     public:
         Universidade (const char* nome);

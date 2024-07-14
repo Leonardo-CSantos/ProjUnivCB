@@ -57,13 +57,15 @@
 
 1720989601 c:\users\leode\documents\projunivcb\projunivcb\departamento.h
 
-1720989601 c:\users\leode\documents\projunivcb\projunivcb\universidade.h
+1720992956 c:\users\leode\documents\projunivcb\projunivcb\universidade.h
+	"stdafx.h"
 	"Departamento.h"
 
-1720989601 c:\users\leode\documents\projunivcb\projunivcb\stdafx.h
+1720992956 c:\users\leode\documents\projunivcb\projunivcb\stdafx.h
 	<stdio.h>
 	<string.h>
 	<iostream>
+	<vector>
 
 1720989601 source:c:\users\leode\documents\projunivcb\projunivcb\main.cpp
 	"Principal.h"
@@ -85,17 +87,17 @@
 	"Pessoa.h"
 	"Universidade.h"
 
-1720989601 source:c:\users\leode\documents\projunivcb\projunivcb\pessoa.cpp
+1720991722 source:c:\users\leode\documents\projunivcb\projunivcb\pessoa.cpp
 	"Pessoa.h"
 	"stdafx.h"
 
-1720991697 source:c:\users\leode\documents\projunivcb\projunivcb\principal.cpp
+1720993039 source:c:\users\leode\documents\projunivcb\projunivcb\principal.cpp
 	"Principal.h"
 	"stdafx.h"
 	<time.h>
 	<Windows.h>
 
-1720989601 source:c:\users\leode\documents\projunivcb\projunivcb\universidade.cpp
+1720992971 source:c:\users\leode\documents\projunivcb\projunivcb\universidade.cpp
 	"Universidade.h"
 	"stdafx.h"
 

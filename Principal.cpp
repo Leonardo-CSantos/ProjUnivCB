@@ -10,7 +10,6 @@ DAINF ("DAINF")
 {
     Einstein.inicializa(14, 3, 1879, "Einstein");
     Newton.inicializa(4, 1, 1643, "Newton");
-    //Leonardo.inicializa (21, 6, 1999, "Leonardo");
     Leonardo.setNome("Leonardo");
 
     Cambridge.setNome ("Cambridge");
