@@ -3,22 +3,23 @@
 	"Principal.h"
 	"stdafx.h"
 
-1720907384 c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.h
+1720973105 c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.h
 	"Universidade.h"
 	"Departamento.h"
 
-1720907400 source:c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.cpp
+1720973105 source:c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.cpp
 	"Pessoa.h"
 	"stdafx.h"
 
-1720966404 source:c:\users\lanhouse\documents\projunivcb\projuniv\principal.cpp
+1720971542 source:c:\users\lanhouse\documents\projunivcb\projuniv\principal.cpp
 	"Principal.h"
 	"stdafx.h"
 	<time.h>
 	<Windows.h>
 
-1720963642 c:\users\lanhouse\documents\projunivcb\projuniv\principal.h
+1720973120 c:\users\lanhouse\documents\projunivcb\projuniv\principal.h
 	"Pessoa.h"
+	"Professor.h"
 	"Universidade.h"
 	"Departamento.h"
 
@@ -30,14 +31,22 @@
 	<string.h>
 	<iostream>
 
-1720967185 source:c:\users\lanhouse\documents\projunivcb\projuniv\universidade.cpp
+1720971542 source:c:\users\lanhouse\documents\projunivcb\projuniv\universidade.cpp
 	"Universidade.h"
 	"stdafx.h"
 
 1720971542 c:\users\lanhouse\documents\projunivcb\projuniv\departamento.h
 
-1720963642 source:c:\users\lanhouse\documents\projunivcb\projuniv\departamento.cpp
+1720971542 source:c:\users\lanhouse\documents\projunivcb\projuniv\departamento.cpp
 	"Departamento.h"
 	"Universidade.h"
 	"stdafx.h"
+
+1720973285 c:\users\lanhouse\documents\projunivcb\projuniv\professor.h
+	"stdafx.h"
+	"Pessoa.h"
+	"Universidade.h"
+
+1720973218 source:c:\users\lanhouse\documents\projunivcb\projuniv\professor.cpp
+	"Professor.h"
 

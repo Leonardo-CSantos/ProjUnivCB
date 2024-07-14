@@ -4,14 +4,12 @@
 
 class Pessoa
 {
-    private:
+    protected:
         int diaP;
         int mesP;
         int anoP;
         int idadeP;
         char nomeP[30];
-        Universidade *univFiliado;
-        Departamento *depFiliado;
 
     public:
         Pessoa (int diaNa, int mesNa, int anoNa, const char* nome = "");
@@ -24,9 +22,5 @@ class Pessoa
         void printIdade ();
         void setNome (const char* nome);
         char* getNome ();
-        void setUniv (Universidade* uni);
-        void getUniv ();
-        void setDpto (Departamento *dep);
-        void getDpto ();
 };
 

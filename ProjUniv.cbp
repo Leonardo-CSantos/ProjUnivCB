@@ -38,6 +38,8 @@
 		<Unit filename="Pessoa.h" />
 		<Unit filename="Principal.cpp" />
 		<Unit filename="Principal.h" />
+		<Unit filename="Professor.cpp" />
+		<Unit filename="Professor.h" />
 		<Unit filename="Universidade.cpp" />
 		<Unit filename="Universidade.h" />
 		<Unit filename="stdafx.h" />
