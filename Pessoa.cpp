@@ -41,7 +41,7 @@ int Pessoa::getIdade ()
 
 void Pessoa::printIdade ()
 {
-    cout << "A idade de " << nomeP << " teria " << idadeP << " anos." << endl;
+    cout << "A idade de " << nomeP << " seria " << idadeP << " anos." << endl;
 }
 
 void Pessoa::setNome (const char* nome)

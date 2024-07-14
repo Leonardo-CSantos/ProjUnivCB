@@ -10,7 +10,8 @@ DAINF ("DAINF")
 {
     Einstein.inicializa(14, 3, 1879, "Einstein");
     Newton.inicializa(4, 1, 1643, "Newton");
-    Leonardo.setNome ("Leonardo");
+    //Leonardo.inicializa (21, 6, 1999, "Leonardo");
+    Leonardo.setNome("Leonardo");
 
     Cambridge.setNome ("Cambridge");
     Princeton.setNome ("Princeton");
@@ -53,8 +54,8 @@ void Principal::Executar ()
     Newton.setUniv (&Cambridge);
     Newton.setDpto (&MatematicaCambridge);
 
-    Leonardo.setUniv (&UTFPR);
-    Leonardo.setDpto (&DAINF);
+    //Leonardo.setUniv (&UTFPR);
+    //Leonardo.setDpto (&DAINF);
 
     Einstein.printIdade();
     Einstein.getUniv();
@@ -65,8 +66,8 @@ void Principal::Executar ()
     Newton.getDpto();
 
     Leonardo.printIdade();
-    Leonardo.getUniv();
-    Leonardo.getDpto();
+    //Leonardo.getUniv();
+    //Leonardo.getDpto();
 
     UTFPR.getDptos();
     Princeton.getDptos();

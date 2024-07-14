@@ -1,6 +1,7 @@
 #pragma once
 #include "Pessoa.h"
 #include "Professor.h"
+#include "Aluno.h"
 #include "Universidade.h"
 #include "Departamento.h"
 
@@ -9,7 +10,7 @@ class Principal
     private:
         Professor Einstein;
         Professor Newton;
-        Professor Leonardo;
+        Aluno Leonardo;
 
         Universidade Princeton;
         Universidade Cambridge;

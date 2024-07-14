@@ -50,3 +50,62 @@
 1720973218 source:c:\users\lanhouse\documents\projunivcb\projuniv\professor.cpp
 	"Professor.h"
 
+1720989601 source:c:\users\leode\documents\projunivcb\projunivcb\departamento.cpp
+	"Departamento.h"
+	"Universidade.h"
+	"stdafx.h"
+
+1720989601 c:\users\leode\documents\projunivcb\projunivcb\departamento.h
+
+1720989601 c:\users\leode\documents\projunivcb\projunivcb\universidade.h
+	"Departamento.h"
+
+1720989601 c:\users\leode\documents\projunivcb\projunivcb\stdafx.h
+	<stdio.h>
+	<string.h>
+	<iostream>
+
+1720989601 source:c:\users\leode\documents\projunivcb\projunivcb\main.cpp
+	"Principal.h"
+	"stdafx.h"
+
+1720991539 c:\users\leode\documents\projunivcb\projunivcb\principal.h
+	"Pessoa.h"
+	"Professor.h"
+	"Aluno.h"
+	"Universidade.h"
+	"Departamento.h"
+
+1720989601 c:\users\leode\documents\projunivcb\projunivcb\pessoa.h
+	"Universidade.h"
+	"Departamento.h"
+
+1720989601 c:\users\leode\documents\projunivcb\projunivcb\professor.h
+	"stdafx.h"
+	"Pessoa.h"
+	"Universidade.h"
+
+1720989601 source:c:\users\leode\documents\projunivcb\projunivcb\pessoa.cpp
+	"Pessoa.h"
+	"stdafx.h"
+
+1720991697 source:c:\users\leode\documents\projunivcb\projunivcb\principal.cpp
+	"Principal.h"
+	"stdafx.h"
+	<time.h>
+	<Windows.h>
+
+1720989601 source:c:\users\leode\documents\projunivcb\projunivcb\universidade.cpp
+	"Universidade.h"
+	"stdafx.h"
+
+1720990627 source:c:\users\leode\documents\projunivcb\projunivcb\professor.cpp
+	"Professor.h"
+
+1720991657 c:\users\leode\documents\projunivcb\projunivcb\aluno.h
+	"stdafx.h"
+	"Pessoa.h"
+
+1720991636 source:c:\users\leode\documents\projunivcb\projunivcb\aluno.cpp
+	"Aluno.h"
+
