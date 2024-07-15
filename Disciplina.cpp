@@ -10,6 +10,7 @@ Disciplina::Disciplina ()
     pDpto = NULL;
     pAlunoPrim = NULL;
     pAlunoAtual = NULL;
+    nAlunos = 0;
 }
 
 Disciplina::~Disciplina ()
@@ -63,14 +64,20 @@ Departamento* Disciplina::getDpto ()
 
 void Disciplina::addAluno (Aluno* aluno)
 {
-    if (pAlunoPrim == NULL)
-        pAlunoPrim = aluno;
-    else
+    if (nAlunos <= 45)
     {
-        pAlunoAtual->setNextAluno(aluno);
-        aluno->setPrevAluno(pAlunoAtual);
+        if (pAlunoPrim == NULL)
+            pAlunoPrim = aluno;
+        else
+        {
+            pAlunoAtual->setNextAluno(aluno);
+            aluno->setPrevAluno(pAlunoAtual);
+        }
+        pAlunoAtual = aluno;
+        nAlunos++;
     }
-    pAlunoAtual = aluno;
+    else
+        cout << "Erro, Disciplina lotada!" << endl;
 }
 
 void Disciplina::listAlunos ()

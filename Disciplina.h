@@ -14,6 +14,7 @@ class Disciplina
         Departamento* pDpto;
         Aluno* pAlunoPrim;
         Aluno* pAlunoAtual;
+        int nAlunos;
 
     public:
         Disciplina ();
