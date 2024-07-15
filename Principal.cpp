@@ -10,7 +10,10 @@ DAINF ("DAINF")
 {
     Einstein.inicializa(14, 3, 1879, "Einstein");
     Newton.inicializa(4, 1, 1643, "Newton");
+
     Leonardo.setNome("Leonardo");
+    AAA.inicializa(03, 02, 1997, "Lu");
+    BBB.inicializa(25, 03, 1999, "Zezinho");
 
     Cambridge.setNome ("Cambridge");
     Princeton.setNome ("Princeton");
@@ -25,6 +28,10 @@ DAINF ("DAINF")
     UTFPR.setDptos(&DAINF);
     Princeton.setDptos(&FisicaPrinceton);
     Cambridge.setDptos(&MatematicaCambridge);
+
+    TecProg.setNome("Tecnicas de Programacao");
+    MatDisc.setNome("Matematica Discreta");
+    ED1.setNome("Estruturas De Dados 1");
 
     SYSTEMTIME st;
     GetSystemTime (&st);
@@ -44,8 +51,10 @@ void Principal::Executar ()
 {
     Einstein.calculaIdade(diaAt, mesAt, anoAt);
     Newton.calculaIdade(diaAt, mesAt, anoAt);
-    Leonardo.calculaIdade(diaAt, mesAt, anoAt);
 
+    Leonardo.calculaIdade(diaAt, mesAt, anoAt);
+    AAA.calculaIdade(diaAt, mesAt, anoAt);
+    BBB.calculaIdade(diaAt, mesAt, anoAt);
 
     Einstein.setUniv (&Princeton);
     Einstein.setDpto (&FisicaPrinceton);
@@ -73,4 +82,14 @@ void Principal::Executar ()
     Cambridge.getDptos();
     DAINF.getUniv();
 
+    DAINF.addDisc(&TecProg);
+    DAINF.addDisc(&MatDisc);
+    DAINF.addDisc(&ED1);
+    DAINF.listDisc();
+    DAINF.listDiscBackwads();
+
+    TecProg.addAluno(&Leonardo);
+    TecProg.addAluno(&AAA);
+    TecProg.addAluno(&BBB);
+    TecProg.listAlunos();
 }
