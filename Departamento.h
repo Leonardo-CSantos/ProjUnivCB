@@ -1,7 +1,7 @@
 #pragma once
 
 #include "stdafx.h"
-#include "Disciplina.h"
+#include "ElDisciplina.h"
 class Universidade;
 
 class Departamento
@@ -9,8 +9,8 @@ class Departamento
     private:
         char nomeDpto[30];
         Universidade* pUni;
-        Disciplina* pDiscPrim;
-        Disciplina* pDiscAtual;
+        ElDisciplina* pDiscPrim;
+        ElDisciplina* pDiscAtual;
 
 
     public:

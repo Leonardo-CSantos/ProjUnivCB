@@ -1,6 +1,5 @@
 #include "Disciplina.h"
 #include "Departamento.h"
-#include "Aluno.h"
 
 Disciplina::Disciplina ()
 {
@@ -18,8 +17,14 @@ Disciplina::~Disciplina ()
     pNextDisc = NULL;
     pPrevDisc = NULL;
     pDpto = NULL;
-    pAlunoPrim = NULL;
-    pAlunoAtual = NULL;
+
+    ElAluno* aux;
+    while (pAlunoPrim != NULL)
+    {
+        aux = pAlunoPrim->getNext();
+        delete pAlunoPrim;
+        pAlunoPrim = aux;
+    }
 }
 
 void Disciplina::setNome(const char* nome)
@@ -64,16 +69,19 @@ Departamento* Disciplina::getDpto ()
 
 void Disciplina::addAluno (Aluno* aluno)
 {
+    ElAluno* aux;
+    aux = new ElAluno ();
+    aux->setAluno(aluno);
     if (nAlunos <= 45)
     {
         if (pAlunoPrim == NULL)
-            pAlunoPrim = aluno;
+            pAlunoPrim = aux;
         else
         {
-            pAlunoAtual->setNextAluno(aluno);
-            aluno->setPrevAluno(pAlunoAtual);
+            pAlunoAtual->setNext(aux);
+            aux->setPrev(pAlunoAtual);
         }
-        pAlunoAtual = aluno;
+        pAlunoAtual = aux;
         nAlunos++;
     }
     else
@@ -82,12 +90,12 @@ void Disciplina::addAluno (Aluno* aluno)
 
 void Disciplina::listAlunos ()
 {
-    Aluno* aux = pAlunoPrim;
+    ElAluno* aux = pAlunoPrim;
     cout << "Lista de alunos da Disciplina " << getNome() << ":" << endl;
 
     while (aux != NULL)
     {
         cout << aux->getNome() << endl;
-        aux = aux->getNextAluno();
+        aux = aux->getNext();
     }
 }

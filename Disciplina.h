@@ -1,9 +1,8 @@
 #pragma once
 
 #include "stdafx.h"
-
+#include "ElAluno.h"
 class Departamento;
-class Aluno;
 
 class Disciplina
 {
@@ -12,8 +11,8 @@ class Disciplina
         Disciplina* pNextDisc;
         Disciplina* pPrevDisc;
         Departamento* pDpto;
-        Aluno* pAlunoPrim;
-        Aluno* pAlunoAtual;
+        ElAluno* pAlunoPrim;
+        ElAluno* pAlunoAtual;
         int nAlunos;
 
     public:

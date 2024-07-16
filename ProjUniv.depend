@@ -38,11 +38,11 @@
 	"Universidade.h"
 	"stdafx.h"
 
-1721076794 c:\users\lanhouse\documents\projunivcb\projuniv\departamento.h
+1721165111 c:\users\lanhouse\documents\projunivcb\projuniv\departamento.h
 	"stdafx.h"
-	"Disciplina.h"
+	"ElDisciplina.h"
 
-1721079152 source:c:\users\lanhouse\documents\projunivcb\projuniv\departamento.cpp
+1721165163 source:c:\users\lanhouse\documents\projunivcb\projuniv\departamento.cpp
 	"Departamento.h"
 	"Universidade.h"
 	"stdafx.h"
@@ -123,11 +123,21 @@
 	"stdafx.h"
 	"Pessoa.h"
 
-1721081349 c:\users\lanhouse\documents\projunivcb\projuniv\disciplina.h
+1721160947 c:\users\lanhouse\documents\projunivcb\projuniv\disciplina.h
 	"stdafx.h"
+	"ElAluno.h"
 
-1721079697 source:c:\users\lanhouse\documents\projunivcb\projuniv\disciplina.cpp
+1721163574 source:c:\users\lanhouse\documents\projunivcb\projuniv\disciplina.cpp
 	"Disciplina.h"
 	"Departamento.h"
+
+1721161813 c:\users\lanhouse\documents\projunivcb\projuniv\elaluno.h
+	"stdafx.h"
+
+1721161813 source:c:\users\lanhouse\documents\projunivcb\projuniv\elaluno.cpp
+	"ElAluno.h"
 	"Aluno.h"
+
+1721165150 c:\users\lanhouse\documents\projunivcb\projuniv\eldisciplina.h
+	"Disciplina.h"
 

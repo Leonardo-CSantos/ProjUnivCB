@@ -46,35 +46,38 @@ void Departamento::getUniv ()
 
 void Departamento::addDisc (Disciplina* disc)
 {
+    ElDisciplina* aux = new ElDisciplina();
+    aux->setDisc(disc);
+
     if (pDiscPrim == NULL)
-        pDiscPrim = disc;
+        pDiscPrim = aux;
     else
     {
-        pDiscAtual->setNextDisc(disc);
-        disc->setPrevDisc(pDiscAtual);
+        pDiscAtual->setNext(aux);
+        aux->setPrev(pDiscAtual);
     }
-    pDiscAtual = disc;
-    pDiscAtual->setDpto(this);
+    pDiscAtual = aux;
+    disc->setDpto(this);
 }
 
 void Departamento::listDisc ()
 {
-    Disciplina* aux = pDiscPrim;
+    ElDisciplina* aux = pDiscPrim;
     cout << "Lista das Disciplinas do Departamento " << nomeDpto << ":" << endl;
     while (aux != NULL)
     {
         cout << aux->getNome() << endl;
-        aux = aux->getNextDisc();
+        aux = aux->getNext();
     }
 }
 
 void Departamento::listDiscBackwads ()
 {
-    Disciplina* aux = pDiscAtual;
+    ElDisciplina* aux = pDiscAtual;
     cout << "Lista das Disciplina do Departamento " << nomeDpto << " de trás para frente:" << endl;
     while (aux != NULL)
     {
         cout << aux->getNome() << endl;
-        aux = aux->getPrevDisc();
+        aux = aux->getPrev();
     }
 }
