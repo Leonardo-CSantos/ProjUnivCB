@@ -9,6 +9,10 @@ class ElAluno
         Aluno* pAl;
         ElAluno* pNext;
         ElAluno* pPrev;
+        float nota1;
+        float nota2;
+        float notaFinal;
+        int faltas;
 
     public:
         ElAluno(Aluno* aluno);
@@ -22,4 +26,12 @@ class ElAluno
         ElAluno* getNext ();
         void setPrev (ElAluno* prev);
         ElAluno* getPrev ();
+        void setn1(float nota);
+        float getn1();
+        void setn2(float nota);
+        float getn2();
+        void setnf(float nota);
+        float getnf();
+        void addFalta();
+        int getFaltas();
 };

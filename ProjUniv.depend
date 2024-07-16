@@ -131,7 +131,7 @@
 	"Disciplina.h"
 	"Departamento.h"
 
-1721161813 c:\users\lanhouse\documents\projunivcb\projuniv\elaluno.h
+1721169941 c:\users\lanhouse\documents\projunivcb\projuniv\elaluno.h
 	"stdafx.h"
 
 1721161813 source:c:\users\lanhouse\documents\projunivcb\projuniv\elaluno.cpp
@@ -140,4 +140,7 @@
 
 1721165150 c:\users\lanhouse\documents\projunivcb\projuniv\eldisciplina.h
 	"Disciplina.h"
+
+1721165228 source:c:\users\lanhouse\documents\projunivcb\projuniv\eldisciplina.cpp
+	"ElDisciplina.h"
 
