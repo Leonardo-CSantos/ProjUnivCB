@@ -1,5 +1,7 @@
 #include "Pessoa.h"
 #include "stdafx.h"
+#include "Universidade.h"
+#include "Departamento.h"
 
 Pessoa::Pessoa (int diaNa, int mesNa, int anoNa, const char* nome)
 {

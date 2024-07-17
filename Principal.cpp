@@ -92,4 +92,5 @@ void Principal::Executar ()
     TecProg.addAluno(&AAA);
     TecProg.addAluno(&BBB);
     TecProg.listAlunos();
+
 }

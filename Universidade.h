@@ -1,20 +1,22 @@
 #pragma once
+
 #include "stdafx.h"
-#include "Departamento.h"
+#include "ListaDepartamento.h"
 
 class Universidade
 {
-    private:
-        char nomeU[30];
-        vector<Departamento*> lDptos;
+private:
+    char nomeU[30];
+    ListaDepartamento listaDptos;
 
-    public:
-        Universidade (const char* nome);
-        Universidade ();
-        ~Universidade ();
+public:
+    Universidade (const char* nome);
+    Universidade ();
+    ~Universidade ();
 
-        void setNome (const char* nome);
-        char* getNome ();
-        void setDptos (Departamento* dpto);
-        void getDptos ();
+    void setNome (const char* nome);
+    char* getNome ();
+    void setDptos (Departamento* dpto);
+    void getDptos ();
 };
+

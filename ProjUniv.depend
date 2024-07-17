@@ -3,30 +3,30 @@
 	"Principal.h"
 	"stdafx.h"
 
-1720973105 c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.h
+1721247408 c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.h
+
+1721246908 source:c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.cpp
+	"Pessoa.h"
+	"stdafx.h"
 	"Universidade.h"
 	"Departamento.h"
 
-1721073139 source:c:\users\lanhouse\documents\projunivcb\projuniv\pessoa.cpp
-	"Pessoa.h"
-	"stdafx.h"
-
-1721080790 source:c:\users\lanhouse\documents\projunivcb\projuniv\principal.cpp
+1721251979 source:c:\users\lanhouse\documents\projunivcb\projuniv\principal.cpp
 	"Principal.h"
 	"stdafx.h"
 	<time.h>
 	<Windows.h>
 
-1721080790 c:\users\lanhouse\documents\projunivcb\projuniv\principal.h
+1721247419 c:\users\lanhouse\documents\projunivcb\projuniv\principal.h
 	"Professor.h"
 	"Aluno.h"
 	"Universidade.h"
 	"Departamento.h"
 	"Disciplina.h"
 
-1721073139 c:\users\lanhouse\documents\projunivcb\projuniv\universidade.h
+1721251606 c:\users\lanhouse\documents\projunivcb\projuniv\universidade.h
 	"stdafx.h"
-	"Departamento.h"
+	"ListaDepartamento.h"
 
 1721073139 c:\users\lanhouse\documents\projunivcb\projuniv\stdafx.h
 	<stdio.h>
@@ -34,23 +34,24 @@
 	<iostream>
 	<vector>
 
-1721073139 source:c:\users\lanhouse\documents\projunivcb\projuniv\universidade.cpp
+1721252287 source:c:\users\lanhouse\documents\projunivcb\projuniv\universidade.cpp
 	"Universidade.h"
 	"stdafx.h"
+	"Departamento.h"
 
-1721165111 c:\users\lanhouse\documents\projunivcb\projuniv\departamento.h
+1721247818 c:\users\lanhouse\documents\projunivcb\projuniv\departamento.h
 	"stdafx.h"
-	"ElDisciplina.h"
+	"ListaDisciplina.h"
 
-1721165163 source:c:\users\lanhouse\documents\projunivcb\projuniv\departamento.cpp
+1721248829 source:c:\users\lanhouse\documents\projunivcb\projuniv\departamento.cpp
 	"Departamento.h"
 	"Universidade.h"
-	"stdafx.h"
 
-1720973285 c:\users\lanhouse\documents\projunivcb\projuniv\professor.h
+1721247426 c:\users\lanhouse\documents\projunivcb\projuniv\professor.h
 	"stdafx.h"
 	"Pessoa.h"
 	"Universidade.h"
+	"Departamento.h"
 
 1721073139 source:c:\users\lanhouse\documents\projunivcb\projuniv\professor.cpp
 	"Professor.h"
@@ -116,31 +117,61 @@
 1720991636 source:c:\users\leode\documents\projunivcb\projunivcb\aluno.cpp
 	"Aluno.h"
 
-1721080841 source:c:\users\lanhouse\documents\projunivcb\projuniv\aluno.cpp
+1721246908 source:c:\users\lanhouse\documents\projunivcb\projuniv\aluno.cpp
 	"Aluno.h"
 
-1721079401 c:\users\lanhouse\documents\projunivcb\projuniv\aluno.h
+1721247375 c:\users\lanhouse\documents\projunivcb\projuniv\aluno.h
 	"stdafx.h"
 	"Pessoa.h"
 
-1721160947 c:\users\lanhouse\documents\projunivcb\projuniv\disciplina.h
+1721247369 c:\users\lanhouse\documents\projunivcb\projuniv\disciplina.h
 	"stdafx.h"
-	"ElAluno.h"
+	"ListaAlunos.h"
 
-1721163574 source:c:\users\lanhouse\documents\projunivcb\projuniv\disciplina.cpp
+1721247159 source:c:\users\lanhouse\documents\projunivcb\projuniv\disciplina.cpp
 	"Disciplina.h"
 	"Departamento.h"
 
-1721169941 c:\users\lanhouse\documents\projunivcb\projuniv\elaluno.h
+1721247391 c:\users\lanhouse\documents\projunivcb\projuniv\elaluno.h
 	"stdafx.h"
 
-1721161813 source:c:\users\lanhouse\documents\projunivcb\projuniv\elaluno.cpp
+1721169941 source:c:\users\lanhouse\documents\projunivcb\projuniv\elaluno.cpp
 	"ElAluno.h"
 	"Aluno.h"
 
-1721165150 c:\users\lanhouse\documents\projunivcb\projuniv\eldisciplina.h
+1721246743 c:\users\lanhouse\documents\projunivcb\projuniv\eldisciplina.h
 	"Disciplina.h"
 
-1721165228 source:c:\users\lanhouse\documents\projunivcb\projuniv\eldisciplina.cpp
+1721245976 source:c:\users\lanhouse\documents\projunivcb\projuniv\eldisciplina.cpp
 	"ElDisciplina.h"
+	"Disciplina.h"
+
+1721247402 c:\users\lanhouse\documents\projunivcb\projuniv\listaalunos.h
+	"stdafx.h"
+	"ElAluno.h"
+	"Aluno.h"
+
+1721247159 source:c:\users\lanhouse\documents\projunivcb\projuniv\listaalunos.cpp
+	"ListaAlunos.h"
+
+1721247866 c:\users\lanhouse\documents\projunivcb\projuniv\listadisciplina.h
+	"stdafx.h"
+	"ElDisciplina.h"
+
+1721247916 source:c:\users\lanhouse\documents\projunivcb\projuniv\listadisciplina.cpp
+	"ListaDisciplina.h"
+
+1721251263 source:c:\users\lanhouse\documents\projunivcb\projuniv\eldepartamento.cpp
+	"ElDepartamento.h"
+
+1721251263 c:\users\lanhouse\documents\projunivcb\projuniv\eldepartamento.h
+	"stdafx.h"
+	"Departamento.h"
+
+1721251263 c:\users\lanhouse\documents\projunivcb\projuniv\listadepartamento.h
+	"stdafx.h"
+	"ElDepartamento.h"
+
+1721252287 source:c:\users\lanhouse\documents\projunivcb\projuniv\listadepartamento.cpp
+	"ListaDepartamento.h"
 

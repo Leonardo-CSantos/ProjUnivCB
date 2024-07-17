@@ -1,5 +1,6 @@
 #include "Universidade.h"
 #include "stdafx.h"
+#include "Departamento.h"
 
 Universidade::Universidade (const char* nome)
 {
@@ -28,13 +29,11 @@ char* Universidade::getNome ()
 
 void Universidade::setDptos (Departamento* dpto)
 {
-    lDptos.push_back(dpto);
+    listaDptos.addDpto(dpto);
     dpto->setUniv(this);
 }
 
 void Universidade::getDptos ()
 {
-    int tam = (int) lDptos.size();
-    for(int i = 0; i < tam; i++)
-        printf ("%s\n", lDptos[i]->getNome());
+    listaDptos.listDpto();
 }

@@ -7,9 +7,6 @@ Disciplina::Disciplina ()
     pNextDisc = NULL;
     pPrevDisc = NULL;
     pDpto = NULL;
-    pAlunoPrim = NULL;
-    pAlunoAtual = NULL;
-    nAlunos = 0;
 }
 
 Disciplina::~Disciplina ()
@@ -17,14 +14,6 @@ Disciplina::~Disciplina ()
     pNextDisc = NULL;
     pPrevDisc = NULL;
     pDpto = NULL;
-
-    ElAluno* aux;
-    while (pAlunoPrim != NULL)
-    {
-        aux = pAlunoPrim->getNext();
-        delete pAlunoPrim;
-        pAlunoPrim = aux;
-    }
 }
 
 void Disciplina::setNome(const char* nome)
@@ -69,33 +58,17 @@ Departamento* Disciplina::getDpto ()
 
 void Disciplina::addAluno (Aluno* aluno)
 {
-    ElAluno* aux;
-    aux = new ElAluno ();
-    aux->setAluno(aluno);
-    if (nAlunos <= 45)
-    {
-        if (pAlunoPrim == NULL)
-            pAlunoPrim = aux;
-        else
-        {
-            pAlunoAtual->setNext(aux);
-            aux->setPrev(pAlunoAtual);
-        }
-        pAlunoAtual = aux;
-        nAlunos++;
-    }
-    else
-        cout << "Erro, Disciplina lotada!" << endl;
+    lista.addAluno(aluno);
 }
 
-void Disciplina::listAlunos ()
+void Disciplina::listAlunos()
 {
-    ElAluno* aux = pAlunoPrim;
     cout << "Lista de alunos da Disciplina " << getNome() << ":" << endl;
+    lista.listAlunos();
+}
 
-    while (aux != NULL)
-    {
-        cout << aux->getNome() << endl;
-        aux = aux->getNext();
-    }
+void Disciplina::listAlunosBackwards()
+{
+    cout << "Lista de alunos da Disciplina " << getNome() << ":" << endl;
+    lista.listAlunosBackwards();
 }

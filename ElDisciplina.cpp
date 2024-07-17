@@ -1,4 +1,5 @@
 #include "ElDisciplina.h"
+#include "Disciplina.h"
 
 ElDisciplina::ElDisciplina(Disciplina* disc)
 {

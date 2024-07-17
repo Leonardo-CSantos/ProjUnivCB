@@ -1,26 +1,27 @@
 #pragma once
-#include "Universidade.h"
-#include "Departamento.h"
+
+class Universidade;
+class Departamento;
 
 class Pessoa
 {
-    protected:
-        int diaP;
-        int mesP;
-        int anoP;
-        int idadeP;
-        char nomeP[30];
+protected:
+    int diaP;
+    int mesP;
+    int anoP;
+    int idadeP;
+    char nomeP[30];
 
-    public:
-        Pessoa (int diaNa, int mesNa, int anoNa, const char* nome = "");
-        Pessoa ();
-        ~Pessoa ();
+public:
+    Pessoa (int diaNa, int mesNa, int anoNa, const char* nome = "");
+    Pessoa ();
+    ~Pessoa ();
 
-        void inicializa (int diaNa, int mesNa, int anoNa, const char* nome = "");
-        void calculaIdade (int diaAt, int mesAt, int anoAt);
-        int getIdade ();
-        void printIdade ();
-        void setNome (const char* nome);
-        char* getNome ();
+    void inicializa (int diaNa, int mesNa, int anoNa, const char* nome = "");
+    void calculaIdade (int diaAt, int mesAt, int anoAt);
+    int getIdade ();
+    void printIdade ();
+    void setNome (const char* nome);
+    char* getNome ();
 };
 
