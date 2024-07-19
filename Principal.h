@@ -9,6 +9,10 @@
 class Principal
 {
 private:
+    ListaUniversidade LUniversidades;
+    ListaDepartamento LDepartamentos;
+    ListaDisciplina LDisciplinas;
+
     Professor Einstein;
     Professor Newton;
 
@@ -37,6 +41,15 @@ private:
 public:
     Principal ();
     ~Principal ();
+
+    void Menu ();
+        void MenuCad ();
+            void CadUniversidade();
+            void CadDepartamento();
+            void CadDisciplina();
+            void CadProfessor();
+            void CadAluno();
+        void MenuExe ();
     void Executar ();
 };
 

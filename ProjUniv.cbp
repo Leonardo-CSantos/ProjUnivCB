@@ -39,8 +39,16 @@
 		<Unit filename="Disciplina.h" />
 		<Unit filename="ElAluno.cpp" />
 		<Unit filename="ElAluno.h" />
+		<Unit filename="ElDepartamento.cpp" />
+		<Unit filename="ElDepartamento.h" />
 		<Unit filename="ElDisciplina.cpp" />
 		<Unit filename="ElDisciplina.h" />
+		<Unit filename="ListaAlunos.cpp" />
+		<Unit filename="ListaAlunos.h" />
+		<Unit filename="ListaDepartamento.cpp" />
+		<Unit filename="ListaDepartamento.h" />
+		<Unit filename="ListaDisciplina.cpp" />
+		<Unit filename="ListaDisciplina.h" />
 		<Unit filename="Main.cpp" />
 		<Unit filename="Pessoa.cpp" />
 		<Unit filename="Pessoa.h" />
