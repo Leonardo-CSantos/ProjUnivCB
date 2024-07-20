@@ -1,20 +1,31 @@
 #include "Departamento.h"
 #include "Universidade.h"
 
-Departamento::Departamento (const char* nome)
+Departamento::Departamento (int dptoId)
 {
-    setNome (nome);
+    id = dptoId;
     pUni = NULL;
 }
 
 Departamento::Departamento ()
 {
+    id = -1;
     pUni = NULL;
 }
 
 Departamento::~Departamento ()
 {
     pUni = NULL;
+}
+
+void Departamento::setId(int dptoId)
+{
+    id = dptoId;
+}
+
+int Departamento::getId()
+{
+    return id;
 }
 
 void Departamento::setNome (const char* nome)

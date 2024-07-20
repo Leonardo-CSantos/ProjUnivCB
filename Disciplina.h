@@ -8,6 +8,7 @@ class Departamento;
 class Disciplina
 {
 private:
+    int id;
     char nomeDisc[50];
     Disciplina* pNextDisc;
     Disciplina* pPrevDisc;
@@ -15,9 +16,12 @@ private:
     ListaAluno lista;
 
 public:
+    Disciplina (int discId);
     Disciplina ();
     ~Disciplina ();
 
+    void setId(int discId);
+    int getId();
     void setNome(const char* nome);
     char* getNome ();
     void setNextDisc(Disciplina* next);

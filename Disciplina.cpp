@@ -1,8 +1,18 @@
 #include "Disciplina.h"
 #include "Departamento.h"
 
+Disciplina::Disciplina (int discId)
+{
+    id = discId;
+    strcpy (nomeDisc, "");
+    pNextDisc = NULL;
+    pPrevDisc = NULL;
+    pDpto = NULL;
+}
+
 Disciplina::Disciplina ()
 {
+    id = -1;
     strcpy (nomeDisc, "");
     pNextDisc = NULL;
     pPrevDisc = NULL;
@@ -14,6 +24,16 @@ Disciplina::~Disciplina ()
     pNextDisc = NULL;
     pPrevDisc = NULL;
     pDpto = NULL;
+}
+
+void Disciplina::setId(int discId)
+{
+    id = discId;
+}
+
+int Disciplina::getId()
+{
+    return id;
 }
 
 void Disciplina::setNome(const char* nome)

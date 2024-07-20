@@ -36,10 +36,12 @@ void ListaDepartamento::addDpto(Departamento* dpto)
 void ListaDepartamento::listDpto()
 {
     ElDepartamento* aux = pDptoPrim;
-    cout << "Lista dos Departamentos cadastrados:" << endl;
+    Departamento* dptoAux = NULL;
+    cout << "Lista dos Departamentos:" << endl;
     while (aux != NULL)
     {
-        cout << aux->getNome() << endl;
+        dptoAux = aux->getDpto();
+        cout << aux->getNome() << ": #" << dptoAux->getId() << endl;
         aux = aux->getNext();
     }
 }

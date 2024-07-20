@@ -3,29 +3,34 @@
 #include <time.h>
 #include <Windows.h>
 
-Principal::Principal () :
-    Leonardo (21, 6, 1999),
-    UTFPR ("UTFPR"),
-    DAINF ("DAINF")
+Principal::Principal ()
 {
-    Einstein.inicializa(14, 3, 1879, "Einstein");
-    Newton.inicializa(4, 1, 1643, "Newton");
+    contIdUniv = 0;
+    contIdDpto = 0;
+    contIdDisc = 0;
+    contIdProf = 0;
+    contIdAluno = 0;
 
-    Leonardo.setNome("Leonardo");
-    AAA.inicializa(03, 02, 1997, "Lu");
-    BBB.inicializa(25, 03, 1999, "Zezinho");
+    Einstein.inicializa(14, 3, 1879, "Einstein", contIdProf++);
+    Newton.inicializa(4, 1, 1643, "Newton", contIdProf++);
+
+    Leonardo.inicializa(29, 6, 1999, "Leonardo", contIdAluno++);
+    AAA.inicializa(03, 02, 1997, "Lu", contIdAluno++);
+    BBB.inicializa(25, 03, 1999, "Zezinho", contIdAluno++);
 
     Cambridge.setNome ("Cambridge");
     Princeton.setNome ("Princeton");
+    UTFPR.setNome("UTFPR");
 
     LUniversidades.addUniversidade(&UTFPR);
     LUniversidades.addUniversidade(&Cambridge);
     LUniversidades.addUniversidade(&Princeton);
 
-    FisicaPrinceton.setNome("Fisica");
-    MatematicaCambridge.setNome ("Matematica");
-    ModaUTFPR.setNome("ModaUTFPR");
-    DAELN.setNome("DAELN");
+    FisicaPrinceton.setNome("Fisica"); FisicaPrinceton.setId(contIdDpto++);
+    MatematicaCambridge.setNome ("Matematica"); MatematicaCambridge.setId(contIdDpto++);
+    ModaUTFPR.setNome("ModaUTFPR"); ModaUTFPR.setId(contIdDpto++);
+    DAELN.setNome("DAELN"); DAELN.setId(contIdDpto++);
+    DAINF.setNome("DAINF"); DAINF.setId(contIdDpto++);
 
     LDepartamentos.addDpto(&FisicaPrinceton);
     LDepartamentos.addDpto(&MatematicaCambridge);
@@ -54,7 +59,7 @@ Principal::Principal () :
     anoAt = st.wYear;
 
     Menu();
-    //Executar();
+    Executar();
 }
 
 Principal::~Principal ()
@@ -254,6 +259,16 @@ void Principal::MenuExe ()
     }
 }
 
+void Principal::MenuGravar ()
+{
+
+}
+
+void Principal::MenuRecuperar ()
+{
+
+}
+
 void Principal::Executar ()
 {
     Einstein.calculaIdade(diaAt, mesAt, anoAt);
@@ -299,4 +314,8 @@ void Principal::Executar ()
     TecProg.addAluno(&AAA);
     TecProg.addAluno(&BBB);
     TecProg.listAlunos();
+
+    cout << Leonardo.getNome() << ": " << Leonardo.getId() << endl;
+    cout << AAA.getNome() << ": " << AAA.getId() << endl;
+    cout << BBB.getNome() << ": " << BBB.getId() << endl;
 }

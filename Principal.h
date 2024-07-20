@@ -6,6 +6,12 @@
 class Principal
 {
 private:
+    int contIdUniv;
+    int contIdDpto;
+    int contIdDisc;
+    int contIdProf;
+    int contIdAluno;
+
     ListaUniversidade LUniversidades;
     ListaDepartamento LDepartamentos;
     ListaDisciplina LDisciplinas;
@@ -47,6 +53,8 @@ public:
             /*void CadProfessor();
             void CadAluno();*/
         void MenuExe ();
+        void MenuGravar ();
+        void MenuRecuperar ();
     void Executar ();
 };
 

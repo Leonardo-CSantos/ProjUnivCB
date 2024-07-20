@@ -3,9 +3,9 @@
 #include "Universidade.h"
 #include "Departamento.h"
 
-Pessoa::Pessoa (int diaNa, int mesNa, int anoNa, const char* nome)
+Pessoa::Pessoa (int diaNa, int mesNa, int anoNa, const char* nome, int pId)
 {
-    inicializa (diaNa, mesNa, anoNa, nome);
+    inicializa (diaNa, mesNa, anoNa, nome, pId);
 }
 
 Pessoa::Pessoa ()
@@ -18,13 +18,14 @@ Pessoa::~Pessoa ()
 
 }
 
-void Pessoa::inicializa (int diaNa, int mesNa, int anoNa, const char* nome)
+void Pessoa::inicializa (int diaNa, int mesNa, int anoNa, const char* nome, int pId)
 {
     diaP = diaNa;
     mesP = mesNa;
     anoP = anoNa;
     idadeP = -1;
     setNome (nome);
+    id = pId;
 }
 
 void Pessoa::calculaIdade (int diaAt, int mesAt, int anoAt)
@@ -54,4 +55,14 @@ void Pessoa::setNome (const char* nome)
 char* Pessoa::getNome ()
 {
     return nomeP;
+}
+
+void Pessoa::setId(int pId)
+{
+    id = pId;
+}
+
+int Pessoa::getId ()
+{
+    return id;
 }

@@ -2,19 +2,30 @@
 #include "stdafx.h"
 #include "Departamento.h"
 
-Universidade::Universidade (const char* nome)
+Universidade::Universidade (const char* nome, int uniId)
 {
+    id = uniId;
     setNome (nome);
 }
 
 Universidade::Universidade ()
 {
-
+    id = -1;
 }
 
 Universidade::~Universidade ()
 {
 
+}
+
+void Universidade::setId(int uniId)
+{
+    id = uniId;
+}
+
+int Universidade::getId()
+{
+    return id;
 }
 
 void Universidade::setNome (const char* nome)
