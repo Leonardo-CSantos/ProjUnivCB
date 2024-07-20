@@ -16,4 +16,5 @@ public:
     void addDisc (Disciplina* disc);
     void listDisc ();
     void listDiscBackwards ();
+    Disciplina* localizar(char* nomeDisc);
 };

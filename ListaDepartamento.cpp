@@ -8,6 +8,13 @@ ListaDepartamento::ListaDepartamento()
 
 ListaDepartamento::~ListaDepartamento()
 {
+    ElDepartamento* aux = NULL;
+    while(pDptoPrim != NULL)
+    {
+        aux = pDptoPrim->getNext();
+        delete pDptoPrim;
+        pDptoPrim = aux;
+    }
     pDptoPrim = NULL;
     pDptoAtual = NULL;
 }
@@ -29,6 +36,7 @@ void ListaDepartamento::addDpto(Departamento* dpto)
 void ListaDepartamento::listDpto()
 {
     ElDepartamento* aux = pDptoPrim;
+    cout << "Lista dos Departamentos cadastrados:" << endl;
     while (aux != NULL)
     {
         cout << aux->getNome() << endl;
@@ -46,3 +54,15 @@ void ListaDepartamento::listDptoBackwards()
     }
 }
 
+Departamento* ListaDepartamento::localizar(char* nomeDpto)
+{
+    ElDepartamento* aux = pDptoPrim;
+    while (aux != NULL)
+    {
+        if (0 == strcmp(nomeDpto, aux->getNome()))
+            return aux->getDpto();
+        else
+            aux = aux->getNext();
+    }
+    return NULL;
+}

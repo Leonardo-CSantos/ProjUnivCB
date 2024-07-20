@@ -16,5 +16,5 @@ public:
     void addDpto(Departamento* dpto);
     void listDpto();
     void listDptoBackwards();
-
+    Departamento* localizar(char* nomeDpto);
 };

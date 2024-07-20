@@ -18,20 +18,34 @@ Principal::Principal () :
     Cambridge.setNome ("Cambridge");
     Princeton.setNome ("Princeton");
 
+    LUniversidades.addUniversidade(&UTFPR);
+    LUniversidades.addUniversidade(&Cambridge);
+    LUniversidades.addUniversidade(&Princeton);
+
     FisicaPrinceton.setNome("Fisica");
     MatematicaCambridge.setNome ("Matematica");
     ModaUTFPR.setNome("ModaUTFPR");
     DAELN.setNome("DAELN");
 
-    UTFPR.setDptos(&DAELN);
-    UTFPR.setDptos(&ModaUTFPR);
-    UTFPR.setDptos(&DAINF);
-    Princeton.setDptos(&FisicaPrinceton);
-    Cambridge.setDptos(&MatematicaCambridge);
+    LDepartamentos.addDpto(&FisicaPrinceton);
+    LDepartamentos.addDpto(&MatematicaCambridge);
+    LDepartamentos.addDpto(&ModaUTFPR);
+    LDepartamentos.addDpto(&DAELN);
+    LDepartamentos.addDpto(&DAINF);
+
+    UTFPR.addDptos(&DAELN);
+    UTFPR.addDptos(&ModaUTFPR);
+    UTFPR.addDptos(&DAINF);
+    Princeton.addDptos(&FisicaPrinceton);
+    Cambridge.addDptos(&MatematicaCambridge);
 
     TecProg.setNome("Tecnicas de Programacao");
     MatDisc.setNome("Matematica Discreta");
     ED1.setNome("Estruturas De Dados 1");
+
+    LDisciplinas.addDisc(&TecProg);
+    LDisciplinas.addDisc(&MatDisc);
+    LDisciplinas.addDisc(&ED1);
 
     SYSTEMTIME st;
     GetSystemTime (&st);
@@ -39,7 +53,8 @@ Principal::Principal () :
     mesAt = st.wMonth;
     anoAt = st.wYear;
 
-    Executar();
+    Menu();
+    //Executar();
 }
 
 Principal::~Principal ()
@@ -47,7 +62,7 @@ Principal::~Principal ()
 
 }
 
-Principal::Menu ()
+void Principal::Menu ()
 {
     int op = -1;
 
@@ -65,7 +80,7 @@ Principal::Menu ()
             case 1:
                 {MenuCad();}
             break;
-            case 2
+            case 2:
                 {MenuExe();}
             break;
             case 3:
@@ -73,7 +88,7 @@ Principal::Menu ()
             break;
             default:
                 {cout << "Opção Inválida!" << endl;
-                system("Pause");
+                system("Pause");}
         }
     }
 }
@@ -88,9 +103,9 @@ void Principal::MenuCad()
         cout << "1 - Cadastrar Universidade." << endl;
         cout << "2 - Cadastrar Departamento." << endl;
         cout << "3 - Cadastrar Disciplina." << endl;
-        cout << "4 - Cadastrar Professor." << endl;
+        /*cout << "4 - Cadastrar Professor." << endl;
         cout << "5 - Cadastrar Aluno." << endl;
-        cout << "6 - Sair." << endl;
+        */cout << "6 - Sair." << endl;
         cin >> op;
 
         switch (op)
@@ -104,12 +119,12 @@ void Principal::MenuCad()
             case 3:
                 {CadDisciplina();}
             break;
-            case 4:
+            /*case 4:
                 {CadProfessor();}
             break;
             case 5:
                 {CadAluno();}
-            break;
+            break;*/
             case 6:
                 {cout << "FIM." << endl;}
             break;
@@ -128,19 +143,81 @@ void Principal::CadUniversidade()
     cout << "Insira o nome da Universidade:" << endl;
     cin >> nomeUniv;
 
-    pUniv = new Universidade();
-    pUniv.setNome(nomeUniv);
-    LUniversidades.addUniv(pUniv);
+    pUniv->setNome(nomeUniv);
+    LUniversidades.addUniversidade(pUniv);
+    cout << "Universidade " << pUniv->getNome() << " incluída no sistema." << endl;
 }
 
 void Principal::CadDepartamento()
 {
-    Departamento* pDpto = new Departamento();
-    char nomeDpto[150];
+    Universidade* pUniv;
+    char nomeUniv[30];
+
 
     cout << "Insira o nome da Universidade ao qual o Departamento pertence:" << endl;
+    cin >> nomeUniv;
+
+    pUniv = LUniversidades.localizar(nomeUniv);
+    if (pUniv != NULL)
+    {
+        Departamento* pDpto = new Departamento();
+        char nomeDpto[30];
+        cout << "Insira o nome do Departamento:" << endl;
+        cin >> nomeDpto;
+        pDpto->setNome(nomeDpto);
+        pUniv->addDptos(pDpto);
+        LDepartamentos.addDpto (pDpto);
+        cout << "Departamento " << pDpto->getNome() << " incluído na Universidade " << pUniv->getNome() << "." << endl;
+    }
+    else
+        cout << "Erro! Universidade não encontrada." << endl;
 }
 
+void Principal::CadDisciplina()
+{
+    Universidade* pUniv;
+    char nomeUniv[30];
+
+    cout << "Insira o nome da Universidade ao qual o Departamento pertence:" << endl;
+    cin >> nomeUniv;
+
+    pUniv = LUniversidades.localizar(nomeUniv);
+    if (pUniv != NULL)
+    {
+        Departamento* pDpto;
+        char nomeDpto[30];
+        cout << "Insira o nome do Departamento:" << endl;
+        cin >> nomeDpto;
+
+        pDpto = LDepartamentos.localizar(nomeDpto);
+        if(pDpto != NULL)
+        {
+            Disciplina* pDisc = new Disciplina();
+            char nomeDisc[50];
+            cout << "Insira o nome da Disciplina:" << endl;
+            cin >> nomeDisc;
+
+            pDisc->setNome(nomeDisc);
+            pDpto->addDisc(pDisc);
+            LDisciplinas.addDisc(pDisc);
+        }
+        else
+            cout << "Erro! Departamento não encontrado." << endl;
+    }
+    else
+        cout << "Erro! Universidade não encontrada." << endl;
+}
+/*
+void Principal::CadProfessor()
+{
+
+}
+
+void Principal::CadAluno()
+{
+
+}
+*/
 void Principal::MenuExe ()
 {
     int op = -1;
@@ -161,11 +238,11 @@ void Principal::MenuExe ()
                     fflush(stdin);
                     system("Pause");}
             break;
-            case 2:{LDepartamentos.listDepartamentos();
+            case 2:{LDepartamentos.listDpto();
                     fflush(stdin);
                     system("Pause");}
             break;
-            case 3:{LDisciplinas.listDisciplinas();
+            case 3:{LDisciplinas.listDisc();
                     fflush(stdin);
                     system("Pause");}
             break;

@@ -16,7 +16,7 @@ public:
 
     void setNome (const char* nome);
     char* getNome ();
-    void setDptos (Departamento* dpto);
+    void addDptos (Departamento* dpto);
     void getDptos ();
 };
 

@@ -27,7 +27,7 @@ char* Universidade::getNome ()
     return nomeU;
 }
 
-void Universidade::setDptos (Departamento* dpto)
+void Universidade::addDptos (Departamento* dpto)
 {
     listaDptos.addDpto(dpto);
     dpto->setUniv(this);
