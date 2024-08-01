@@ -2,41 +2,22 @@
 
 ListaAluno::ListaAluno()
 {
-    pAlunoPrim = NULL;
-    pAlunoAtual = NULL;
-    nAlunos = 0;
+
 }
 
 ListaAluno::~ListaAluno()
 {
-    limpalista ();
+
 }
 
 void ListaAluno::addAluno (Aluno* aluno)
 {
-    Elemento<Aluno>* aux;
-    aux = new Elemento<Aluno> ();
-    aux->setInfo(aluno);
-    aux->setNome(aluno->getNome());
-    if (nAlunos < 45)
-    {
-        if (pAlunoPrim == NULL)
-            pAlunoPrim = aux;
-        else
-        {
-            pAlunoAtual->setNext(aux);
-            aux->setPrev(pAlunoAtual);
-        }
-        pAlunoAtual = aux;
-        nAlunos++;
-    }
-    else
-        cout << "Erro, Disciplina lotada!" << endl;
+    LTAlunos.addInfo(aluno, aluno->getNome());
 }
 
 void ListaAluno::listAlunos ()
 {
-    Elemento<Aluno>* aux = pAlunoPrim;
+    Elemento<Aluno>* aux = LTAlunos.getPrim();
 
     while (aux != NULL)
     {
@@ -47,7 +28,7 @@ void ListaAluno::listAlunos ()
 
 void ListaAluno::listAlunosBackwards()
 {
-    Elemento<Aluno>* aux = pAlunoAtual;
+    Elemento<Aluno>* aux = LTAlunos.getAtual();
 
     while (aux != NULL)
     {
@@ -58,7 +39,7 @@ void ListaAluno::listAlunosBackwards()
 
 Aluno* ListaAluno::localizar (char* nomeAluno)
 {
-    Elemento<Aluno>* aux = pAlunoPrim;
+    Elemento<Aluno>* aux = LTAlunos.getPrim();
     while (aux != NULL)
     {
         if (0 == strcmp (nomeAluno, aux->getNome()))
@@ -80,7 +61,7 @@ void ListaAluno::gravarAlunos ()
         return;
     }
 
-    Elemento<Aluno>* pElAlunoAux = pAlunoPrim;
+    Elemento<Aluno>* pElAlunoAux = LTAlunos.getPrim();
     Aluno* pAlunoAux = NULL;
 
     while (pElAlunoAux != NULL)
@@ -136,13 +117,5 @@ void ListaAluno::recuperarAlunos ()
 
 void ListaAluno::limpalista ()
 {
-    Elemento<Aluno>* aux;
-    while (pAlunoPrim != NULL)
-    {
-        aux = pAlunoPrim->getNext();
-        delete pAlunoPrim;
-        pAlunoPrim = aux;
-    }
-    pAlunoPrim = NULL;
-    pAlunoAtual = NULL;
+    LTAlunos.limpalista ();
 }

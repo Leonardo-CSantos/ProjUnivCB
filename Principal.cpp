@@ -11,16 +11,17 @@ Principal::Principal ()
     contIdProf = 0;
     contIdAluno = 0;
 
-    Einstein.inicializa(14, 3, 1879, "Einstein", contIdProf++);
-    Newton.inicializa(4, 1, 1643, "Newton", contIdProf++);
+    inicializaProfessores ();
+    inicializaAlunos ();
 
-    Leonardo.inicializa(29, 6, 1999, "Leonardo", contIdAluno++);
-    AAA.inicializa(03, 02, 1997, "Lu", contIdAluno++);
-    BBB.inicializa(25, 03, 1999, "Zezinho", contIdAluno++);
+    //LPessoas.addInfo(static_cast<Pessoa> &Einstein, Einstein.getNome());
+    //LPessoas.addInfo(&Einstein, Einstein.getNome());
+    //LPessoas.addInfo(&Einstein, Einstein.getNome());
+    //LPessoas.addInfo(&Einstein, Einstein.getNome());
+    //LPessoas.addInfo(&Einstein, Einstein.getNome());
+    //LPessoas.addInfo(&Einstein, Einstein.getNome());
+    //LPessoas.addInfo(&Einstein, Einstein.getNome());
 
-    LAlunos.addAluno(&Leonardo);
-    LAlunos.addAluno(&AAA);
-    LAlunos.addAluno(&BBB);
 
     Cambridge.setNome ("Cambridge");
     Princeton.setNome ("Princeton");
@@ -69,6 +70,35 @@ Principal::Principal ()
 Principal::~Principal ()
 {
 
+}
+
+void Principal::inicializaProfessores ()
+{
+    Einstein.inicializa(14, 3, 1879, "Einstein", contIdProf++);
+    Pessoa* pPessoa = static_cast<Pessoa*> (&Einstein);
+    LPessoas.addInfo (pPessoa, pPessoa->getNome());
+
+    Newton.inicializa(4, 1, 1643, "Newton", contIdProf++);
+    pPessoa = static_cast<Pessoa*> (&Newton);
+    LPessoas.addInfo (pPessoa, pPessoa->getNome());
+}
+
+void Principal::inicializaAlunos ()
+{
+    Leonardo.inicializa(29, 6, 1999, "Leonardo", contIdAluno++);
+    LAlunos.addAluno(&Leonardo);
+    Pessoa* pPessoa = static_cast<Pessoa*> (&Leonardo);
+    LPessoas.addInfo (pPessoa, pPessoa->getNome());
+
+    AAA.inicializa(03, 02, 1997, "Lu", contIdAluno++);
+    LAlunos.addAluno(&AAA);
+    pPessoa = static_cast<Pessoa*> (&AAA);
+    LPessoas.addInfo (pPessoa, pPessoa->getNome());
+
+    BBB.inicializa(25, 03, 1999, "Zezinho", contIdAluno++);
+    LAlunos.addAluno(&BBB);
+    pPessoa = static_cast<Pessoa*> (&BBB);
+    LPessoas.addInfo (pPessoa, pPessoa->getNome());
 }
 
 void Principal::Menu ()
@@ -240,6 +270,8 @@ void Principal::CadAluno()
 
     pAluno->setNome(nome);
     LAlunos.addAluno(pAluno);
+    Pessoa *pPessoa = static_cast<Pessoa*> (pAluno);
+    LPessoas.addInfo(pPessoa, pPessoa->getNome());
     cout << "Aluno " << pAluno->getNome() << " adicionado ao sistema." << endl;
 }
 
@@ -254,7 +286,7 @@ void Principal::MenuExe ()
         cout << "1 - Listar Universidades." << endl;
         cout << "2 - Listar Departamentos." << endl;
         cout << "3 - Listar Disciplinas." << endl;
-        //cout << "4 - Listar Professores." << endl;
+        cout << "4 - Listar Pessoas." << endl;
         cout << "5 - Listar Alunos." << endl;
         cout << "6 - Sair." << endl;
         cin >> op;
@@ -273,8 +305,10 @@ void Principal::MenuExe ()
                     fflush(stdin);
                     system("Pause");}
             break;
-            /*case 4:{LProfessores.listProf();
-            break;*/
+            case 4:{LPessoas.listeInfos();
+                    fflush(stdin);
+                    system("Pause");}
+            break;
             case 5:{LAlunos.listAlunos();
                     fflush(stdin);
                     system("Pause");}

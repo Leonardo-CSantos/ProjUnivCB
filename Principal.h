@@ -1,5 +1,6 @@
 #pragma once
 
+#include "stdafx.h"
 #include "Professor.h"
 #include "ListaUniversidade.h"
 
@@ -16,6 +17,7 @@ private:
     ListaDepartamento LDepartamentos;
     ListaDisciplina LDisciplinas;
     ListaAluno LAlunos;
+    Lista<Pessoa> LPessoas;
 
     Professor Einstein;
     Professor Newton;
@@ -45,6 +47,9 @@ private:
 public:
     Principal ();
     ~Principal ();
+
+    void inicializaProfessores ();
+    void inicializaAlunos ();
 
     void Menu ();
         void MenuCad ();

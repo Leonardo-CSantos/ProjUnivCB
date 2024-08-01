@@ -36,3 +36,23 @@ void Professor::getDpto ()
     cout << "O Professor " << nomeP << " trabalha no Departamento " << pDptoFiliado->getNome() << endl;
 }
 
+void Professor::setSalario (float s)
+{
+    salario = s;
+}
+
+float Professor::getSalario ()
+{
+    return salario;
+}
+
+void Professor::setBolsaProjeto (float bp)
+{
+    bolsaProjeto = bp;
+}
+
+float Professor::getBolsaProjeto ()
+{
+    return bolsaProjeto;
+}
+

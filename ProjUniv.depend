@@ -258,3 +258,155 @@
 1722520388 c:\users\leode\documents\projunivcb\projunivcb\elemento.h
 	"stdafx.h"
 
+1722549924 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\aluno.cpp
+	"Aluno.h"
+
+1722549924 c:\users\lanhouse\documents\projunivcb\new\projunivcb\aluno.h
+	"stdafx.h"
+	"Pessoa.h"
+
+1722546840 c:\users\lanhouse\documents\projunivcb\new\projunivcb\stdafx.h
+	<stdio.h>
+	<tchar.h>
+	<string.h>
+	"Elemento.h"
+	"Lista.h"
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<vector>
+
+1722548935 c:\users\lanhouse\documents\projunivcb\new\projunivcb\elemento.h
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\pessoa.h
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\departamento.cpp
+	"Departamento.h"
+	"Universidade.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\departamento.h
+	"stdafx.h"
+	"ListaDisciplina.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\listadisciplina.h
+	"stdafx.h"
+	"ElDisciplina.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\eldisciplina.h
+	"Disciplina.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\disciplina.h
+	"stdafx.h"
+	"ListaAlunos.h"
+
+1722548542 c:\users\lanhouse\documents\projunivcb\new\projunivcb\listaalunos.h
+	"stdafx.h"
+	"Aluno.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\universidade.h
+	"stdafx.h"
+	"ListaDepartamento.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\listadepartamento.h
+	"stdafx.h"
+	"ElDepartamento.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\eldepartamento.h
+	"stdafx.h"
+	"Departamento.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\disciplina.cpp
+	"Disciplina.h"
+	"Departamento.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\elaluno.cpp
+	"ElAluno.h"
+	"Aluno.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\elaluno.h
+	"stdafx.h"
+	"Aluno.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\eldepartamento.cpp
+	"ElDepartamento.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\eldisciplina.cpp
+	"ElDisciplina.h"
+	"Disciplina.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\eluniversidade.cpp
+	"ElUniversidade.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\eluniversidade.h
+	"stdafx.h"
+	"Universidade.h"
+
+1722548542 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\listaalunos.cpp
+	"ListaAlunos.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\listadepartamento.cpp
+	"ListaDepartamento.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\listadisciplina.cpp
+	"ListaDisciplina.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\listauniversidade.cpp
+	"ListaUniversidade.h"
+
+1722541381 c:\users\lanhouse\documents\projunivcb\new\projunivcb\listauniversidade.h
+	"stdafx.h"
+	"ElUniversidade.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\main.cpp
+	"Principal.h"
+	"stdafx.h"
+
+1722549938 c:\users\lanhouse\documents\projunivcb\new\projunivcb\principal.h
+	"stdafx.h"
+	"Professor.h"
+	"ListaUniversidade.h"
+
+1722551290 c:\users\lanhouse\documents\projunivcb\new\projunivcb\professor.h
+	"stdafx.h"
+	"Pessoa.h"
+	"Universidade.h"
+	"Departamento.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\pessoa.cpp
+	"Pessoa.h"
+	"stdafx.h"
+	"Universidade.h"
+	"Departamento.h"
+
+1722550651 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\principal.cpp
+	"Principal.h"
+	"stdafx.h"
+	<time.h>
+	<Windows.h>
+
+1722551290 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\professor.cpp
+	"Professor.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\universidade.cpp
+	"Universidade.h"
+	"stdafx.h"
+	"Departamento.h"
+
+1722541381 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\lista.cpp
+
+1722550848 c:\users\lanhouse\documents\projunivcb\new\projunivcb\lista.h
+	<iostream>
+
+1722546840 c:\users\lanhouse\documents\projunivcb\new\projunivcb\stdafx2.h
+	<stdio.h>
+	<tchar.h>
+	<string.h>
+	"Elemento.h"
+	"Lista.h"
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<vector>
+
+1722549599 source:c:\users\lanhouse\documents\projunivcb\new\projunivcb\estagiario.cpp
+

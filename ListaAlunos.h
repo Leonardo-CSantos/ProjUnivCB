@@ -6,9 +6,7 @@
 class ListaAluno
 {
 private:
-    Elemento<Aluno>* pAlunoPrim;
-    Elemento<Aluno>* pAlunoAtual;
-    int nAlunos;
+    Lista<Aluno> LTAlunos;
 
 public:
     ListaAluno ();

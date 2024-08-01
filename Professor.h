@@ -10,6 +10,8 @@ class Professor : public Pessoa
 private:
     Universidade *pUnivFiliado;
     Departamento *pDptoFiliado;
+    float salario;
+    float bolsaProjeto;
 
 public:
     Professor (int diaNa, int mesNa, int anoNa, const char* nome = "");
@@ -20,4 +22,8 @@ public:
     void getUniv ();
     void setDpto (Departamento *dep);
     void getDpto ();
+    void setSalario (float s);
+    float getSalario ();
+    void setBolsaProjeto (float s);
+    float getBolsaProjeto ();
 };

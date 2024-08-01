@@ -6,6 +6,8 @@
 #include <string.h>
 
 #include "Elemento.h"
+#include "Lista.h"
+
 #include <iostream>
 #include <fstream>
 #include <cstdlib>

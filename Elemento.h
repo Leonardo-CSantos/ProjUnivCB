@@ -1,7 +1,5 @@
 #pragma once
 
-#include "stdafx.h"
-
 template<class TIPO>
 class Elemento
 {
