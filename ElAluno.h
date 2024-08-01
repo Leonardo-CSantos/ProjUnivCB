@@ -1,7 +1,7 @@
 #pragma once
 
 #include "stdafx.h"
-class Aluno;
+#include "Aluno.h"
 
 class ElAluno
 {

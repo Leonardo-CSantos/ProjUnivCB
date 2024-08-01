@@ -18,6 +18,10 @@ Principal::Principal ()
     AAA.inicializa(03, 02, 1997, "Lu", contIdAluno++);
     BBB.inicializa(25, 03, 1999, "Zezinho", contIdAluno++);
 
+    LAlunos.addAluno(&Leonardo);
+    LAlunos.addAluno(&AAA);
+    LAlunos.addAluno(&BBB);
+
     Cambridge.setNome ("Cambridge");
     Princeton.setNome ("Princeton");
     UTFPR.setNome("UTFPR");
@@ -71,13 +75,15 @@ void Principal::Menu ()
 {
     int op = -1;
 
-    while (op != 3)
+    while (op != 5)
     {
         system("cls");
         cout << "Insira a opção desejada:" << endl;
         cout << "1 - Cadastrar." << endl;
         cout << "2 - Executar." << endl;
-        cout << "3 - Sair." << endl;
+        cout << "3 - Gravar." << endl;
+        cout << "4 - Recuperar." << endl;
+        cout << "5 - Sair." << endl;
         cin >> op;
 
         switch (op)
@@ -89,7 +95,13 @@ void Principal::Menu ()
                 {MenuExe();}
             break;
             case 3:
-                {cout << "FIM." << endl;}
+                {MenuGravar();}
+            break;
+            case 4:
+                {MenuRecuperar();}
+            break;
+            case 5:
+                {cout << "Fim." << endl;}
             break;
             default:
                 {cout << "Opção Inválida!" << endl;
@@ -108,9 +120,9 @@ void Principal::MenuCad()
         cout << "1 - Cadastrar Universidade." << endl;
         cout << "2 - Cadastrar Departamento." << endl;
         cout << "3 - Cadastrar Disciplina." << endl;
-        /*cout << "4 - Cadastrar Professor." << endl;
+        //cout << "4 - Cadastrar Professor." << endl;
         cout << "5 - Cadastrar Aluno." << endl;
-        */cout << "6 - Sair." << endl;
+        cout << "6 - Sair." << endl;
         cin >> op;
 
         switch (op)
@@ -126,10 +138,10 @@ void Principal::MenuCad()
             break;
             /*case 4:
                 {CadProfessor();}
-            break;
+            break;*/
             case 5:
                 {CadAluno();}
-            break;*/
+            break;
             case 6:
                 {cout << "FIM." << endl;}
             break;
@@ -217,24 +229,34 @@ void Principal::CadProfessor()
 {
 
 }
-
+*/
 void Principal::CadAluno()
 {
+    Aluno* pAluno = new Aluno();
+    char nome[150];
 
+    cout << "Insira o nome do Aluno: " << endl;
+    cin >> nome;
+
+    pAluno->setNome(nome);
+    LAlunos.addAluno(pAluno);
+    cout << "Aluno " << pAluno->getNome() << " adicionado ao sistema." << endl;
 }
-*/
+
 void Principal::MenuExe ()
 {
     int op = -1;
 
-    while (op != 4)
+    while (op != 6)
     {
         system("cls");
         cout << "Informa a opção desejada:" << endl;
         cout << "1 - Listar Universidades." << endl;
         cout << "2 - Listar Departamentos." << endl;
         cout << "3 - Listar Disciplinas." << endl;
-        cout << "4 - Sair." << endl;
+        //cout << "4 - Listar Professores." << endl;
+        cout << "5 - Listar Alunos." << endl;
+        cout << "6 - Sair." << endl;
         cin >> op;
 
         switch (op)
@@ -251,7 +273,12 @@ void Principal::MenuExe ()
                     fflush(stdin);
                     system("Pause");}
             break;
-            case 4:{cout << "FIM." << endl;}
+            /*case 4:{LProfessores.listProf();
+            break;*/
+            case 5:{LAlunos.listAlunos();
+                    fflush(stdin);
+                    system("Pause");}
+            case 6:{}
             break;
             default:{cout << "Opção Invalida!" << endl;
                     system("Pause");}
@@ -261,12 +288,60 @@ void Principal::MenuExe ()
 
 void Principal::MenuGravar ()
 {
+    int op = -1;
 
+
+
+    while (op != 6)
+    {
+        system ("cls");
+        cout << "Selecione a lista a ser gravada: " << endl;
+        cout << "1 - Universidades." << endl;
+        cout << "2 - Departamentos." << endl;
+        cout << "3 - Disciplinas." << endl;
+        cout << "4 - Professores." << endl;
+        cout << "5 - Alunos." << endl;
+        cout << "6 - Sair." << endl;
+        cin >> op;
+
+        switch (op)
+        {
+            case 5:{LAlunos.gravarAlunos();
+                    system ("Pause");}
+            break;
+            case 6:{cout << "Fim." << endl;}
+            break;
+            default:{cout << "Opcao invalida" << endl;
+                    system ("Pause");}
+        }
+    }
 }
 
 void Principal::MenuRecuperar ()
 {
+    int op = -1;
 
+    while (op != 6)
+    {
+        cout << "Selecione a lista a ser recuperada." << endl;
+        cout << "1 - Universidades" << endl;
+        cout << "2 - Departamentos." << endl;
+        cout << "3 - Disciplinas." << endl;
+        cout << "4 - Professores." << endl;
+        cout << "5 - Alunos." << endl;
+        cout << "6 - Sair." << endl;
+        cin >> op;
+
+        switch (op)
+        {
+            case 5:{LAlunos.recuperarAlunos();
+                    system("Pause");}
+            break;
+            case 6:{cout << "Fim." << endl;}
+            break;
+            default:{cout << "Opcao invalida" << endl;}
+        }
+    }
 }
 
 void Principal::Executar ()

@@ -45,6 +45,9 @@
 		<Unit filename="ElDisciplina.h" />
 		<Unit filename="ElUniversidade.cpp" />
 		<Unit filename="ElUniversidade.h" />
+		<Unit filename="Elemento.h" />
+		<Unit filename="Lista.cpp" />
+		<Unit filename="Lista.h" />
 		<Unit filename="ListaAlunos.cpp" />
 		<Unit filename="ListaAlunos.h" />
 		<Unit filename="ListaDepartamento.cpp" />

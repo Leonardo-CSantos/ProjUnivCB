@@ -15,6 +15,7 @@ private:
     ListaUniversidade LUniversidades;
     ListaDepartamento LDepartamentos;
     ListaDisciplina LDisciplinas;
+    ListaAluno LAlunos;
 
     Professor Einstein;
     Professor Newton;
@@ -50,8 +51,8 @@ public:
             void CadUniversidade();
             void CadDepartamento();
             void CadDisciplina();
-            /*void CadProfessor();
-            void CadAluno();*/
+            //void CadProfessor();
+            void CadAluno();
         void MenuExe ();
         void MenuGravar ();
         void MenuRecuperar ();

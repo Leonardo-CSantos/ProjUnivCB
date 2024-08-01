@@ -53,65 +53,69 @@
 1721073139 source:c:\users\lanhouse\documents\projunivcb\projuniv\professor.cpp
 	"Professor.h"
 
-1720989601 source:c:\users\leode\documents\projunivcb\projunivcb\departamento.cpp
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\departamento.cpp
 	"Departamento.h"
 	"Universidade.h"
+
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\departamento.h
 	"stdafx.h"
+	"ListaDisciplina.h"
 
-1720989601 c:\users\leode\documents\projunivcb\projunivcb\departamento.h
-
-1720992956 c:\users\leode\documents\projunivcb\projunivcb\universidade.h
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\universidade.h
 	"stdafx.h"
-	"Departamento.h"
+	"ListaDepartamento.h"
 
-1720992956 c:\users\leode\documents\projunivcb\projunivcb\stdafx.h
+1722520908 c:\users\leode\documents\projunivcb\projunivcb\stdafx.h
 	<stdio.h>
+	<tchar.h>
 	<string.h>
+	"Elemento.h"
 	<iostream>
+	<fstream>
+	<cstdlib>
 	<vector>
 
-1720989601 source:c:\users\leode\documents\projunivcb\projunivcb\main.cpp
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\main.cpp
 	"Principal.h"
 	"stdafx.h"
 
-1720991539 c:\users\leode\documents\projunivcb\projunivcb\principal.h
-	"Pessoa.h"
+1722192946 c:\users\leode\documents\projunivcb\projunivcb\principal.h
 	"Professor.h"
-	"Aluno.h"
-	"Universidade.h"
-	"Departamento.h"
+	"ListaUniversidade.h"
 
-1720989601 c:\users\leode\documents\projunivcb\projunivcb\pessoa.h
-	"Universidade.h"
-	"Departamento.h"
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\pessoa.h
 
-1720989601 c:\users\leode\documents\projunivcb\projunivcb\professor.h
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\professor.h
 	"stdafx.h"
 	"Pessoa.h"
 	"Universidade.h"
+	"Departamento.h"
 
-1720991722 source:c:\users\leode\documents\projunivcb\projunivcb\pessoa.cpp
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\pessoa.cpp
 	"Pessoa.h"
 	"stdafx.h"
+	"Universidade.h"
+	"Departamento.h"
 
-1720993039 source:c:\users\leode\documents\projunivcb\projunivcb\principal.cpp
+1722194901 source:c:\users\leode\documents\projunivcb\projunivcb\principal.cpp
 	"Principal.h"
 	"stdafx.h"
 	<time.h>
 	<Windows.h>
 
-1720992971 source:c:\users\leode\documents\projunivcb\projunivcb\universidade.cpp
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\universidade.cpp
 	"Universidade.h"
 	"stdafx.h"
+	"Departamento.h"
 
-1720990627 source:c:\users\leode\documents\projunivcb\projunivcb\professor.cpp
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\professor.cpp
 	"Professor.h"
 
-1720991657 c:\users\leode\documents\projunivcb\projunivcb\aluno.h
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\aluno.h
 	"stdafx.h"
 	"Pessoa.h"
 
-1720991636 source:c:\users\leode\documents\projunivcb\projunivcb\aluno.cpp
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\aluno.cpp
 	"Aluno.h"
 
 1721246908 source:c:\users\lanhouse\documents\projunivcb\projuniv\aluno.cpp
@@ -185,4 +189,72 @@
 
 1721496437 source:c:\users\lanhouse\documents\projunivcb\projuniv\listauniversidade.cpp
 	"ListaUniversidade.h"
+
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\listadisciplina.h
+	"stdafx.h"
+	"ElDisciplina.h"
+
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\eldisciplina.h
+	"Disciplina.h"
+
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\disciplina.h
+	"stdafx.h"
+	"ListaAlunos.h"
+
+1722530667 c:\users\leode\documents\projunivcb\projunivcb\listaalunos.h
+	"stdafx.h"
+	"Aluno.h"
+
+1722520181 c:\users\leode\documents\projunivcb\projunivcb\elaluno.h
+	"stdafx.h"
+	"Aluno.h"
+
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\listadepartamento.h
+	"stdafx.h"
+	"ElDepartamento.h"
+
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\eldepartamento.h
+	"stdafx.h"
+	"Departamento.h"
+
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\disciplina.cpp
+	"Disciplina.h"
+	"Departamento.h"
+
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\elaluno.cpp
+	"ElAluno.h"
+	"Aluno.h"
+
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\eldepartamento.cpp
+	"ElDepartamento.h"
+
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\eldisciplina.cpp
+	"ElDisciplina.h"
+	"Disciplina.h"
+
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\eluniversidade.cpp
+	"ElUniversidade.h"
+
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\eluniversidade.h
+	"stdafx.h"
+	"Universidade.h"
+
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\listadepartamento.cpp
+	"ListaDepartamento.h"
+
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\listadisciplina.cpp
+	"ListaDisciplina.h"
+
+1722190510 source:c:\users\leode\documents\projunivcb\projunivcb\listauniversidade.cpp
+	"ListaUniversidade.h"
+
+1722190510 c:\users\leode\documents\projunivcb\projunivcb\listauniversidade.h
+	"stdafx.h"
+	"ElUniversidade.h"
+
+1722520908 source:c:\users\leode\documents\projunivcb\projunivcb\listaalunos.cpp
+	"ListaAlunos.h"
+
+1722520388 c:\users\leode\documents\projunivcb\projunivcb\elemento.h
+	"stdafx.h"
 

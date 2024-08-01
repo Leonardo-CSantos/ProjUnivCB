@@ -1,14 +1,13 @@
 #pragma once
 
 #include "stdafx.h"
-#include "ElAluno.h"
 #include "Aluno.h"
 
 class ListaAluno
 {
 private:
-    ElAluno* pAlunoPrim;
-    ElAluno* pAlunoAtual;
+    Elemento<Aluno>* pAlunoPrim;
+    Elemento<Aluno>* pAlunoAtual;
     int nAlunos;
 
 public:
@@ -18,4 +17,8 @@ public:
     void addAluno(Aluno* aluno);
     void listAlunos();
     void listAlunosBackwards();
+    Aluno* localizar (char* nomeAluno);
+    void gravarAlunos ();
+    void recuperarAlunos ();
+    void limpalista ();
 };
